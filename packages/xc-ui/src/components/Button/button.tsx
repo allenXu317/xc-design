@@ -28,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={classes} disabled={disabled} {...restProps}>
-      123
+      {children}
     </button>
   );
 };

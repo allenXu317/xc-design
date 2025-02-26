@@ -3,7 +3,7 @@
  * @type {import('prettier').Config}
  * @see https://www.prettier.cn/docs/options.html
  */
-export default {
+module.exports = {
   trailingComma: 'all',
   singleQuote: true,
   semi: true,

@@ -1,8 +1,22 @@
 import { Button, ButtonSize, ButtonType } from './components/Button';
+import { Menu, MenuItem, SubMenu} from './components/Menu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <>
+      <FontAwesomeIcon icon={faCoffee} />
+      <Menu  mode='vertical' onSelect={(index) => console.log('-----click-----', index)}>
+        <MenuItem disabled >asd1</MenuItem>
+        <MenuItem >asd2</MenuItem>
+        <MenuItem >asd3</MenuItem>
+        <SubMenu title="dropdown">
+          <MenuItem disabled>dropdown1</MenuItem>
+          <MenuItem>dropdown2</MenuItem>
+          <MenuItem>dropdown3</MenuItem>
+        </SubMenu>
+      </Menu>
       <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
         12399
       </Button>

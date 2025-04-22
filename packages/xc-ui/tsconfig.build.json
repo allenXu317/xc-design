@@ -4,10 +4,11 @@
     "module": "ESNext",
     "target": "ES5",
     "declaration": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "lib": ["dom", "es2015"]
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
   },
   "include": ["src"],
   "exclude": [
@@ -17,6 +18,8 @@
     "coverage",
     "**/*.test.tsx",
     "**/*.test.ts",
-    "**/*.stories.tsx"
+    "**/*.stories.tsx",
+    "**/App.tsx",
+    "**/main.tsx",
   ],
 }

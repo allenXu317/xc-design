@@ -9,6 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import classNames from 'classnames';
 export var Input = function (_a) {
     var _b;
@@ -30,10 +31,5 @@ export var Input = function (_a) {
     // 根据属性计算不同的 className
     return (
     // 根据属性判断是否要添加特定的节点
-    React.createElement("div", { className: classnames, style: style },
-        prepend && React.createElement("div", { className: "viking-input-group-prepend" }, prepend),
-        icon && React.createElement("div", { className: "icon-wrapper" }, icon),
-        React.createElement("input", { className: 'viking-input-inner', style: { width: width }, placeholder: placeholder, onChange: handleInputChange, type: type, value: value, onBlur: props.onBlur }),
-        iconAppend && React.createElement("div", { className: "icon-wrapper" }, iconAppend),
-        append && React.createElement("div", { className: "viking-input-group-append" }, append)));
+    _jsxs("div", { className: classnames, style: style, children: [prepend && _jsx("div", { className: "viking-input-group-prepend", children: prepend }), icon && _jsx("div", { className: "icon-wrapper", children: icon }), _jsx("input", { className: 'viking-input-inner', style: { width: width }, placeholder: placeholder, onChange: handleInputChange, type: type, value: value, onBlur: props.onBlur }), iconAppend && _jsx("div", { className: "icon-wrapper", children: iconAppend }), append && _jsx("div", { className: "viking-input-group-append", children: append })] }));
 };

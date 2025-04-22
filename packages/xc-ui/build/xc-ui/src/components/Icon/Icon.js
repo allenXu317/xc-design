@@ -20,7 +20,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React from "react";
+import { jsx as _jsx } from "react/jsx-runtime";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -33,6 +33,6 @@ var Icon = function (props) {
     var classes = classNames('xc-icon', className, (_a = {},
         _a["icon-".concat(theme)] = theme,
         _a));
-    return (React.createElement(FontAwesomeIcon, __assign({ className: classes }, restProps)));
+    return (_jsx(FontAwesomeIcon, __assign({ className: classes }, restProps)));
 };
 export default Icon;

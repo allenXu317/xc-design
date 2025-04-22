@@ -1,3 +1,4 @@
+import { jsx as _jsx } from "react/jsx-runtime";
 import React from "react";
 import classNames from "classnames";
 export var Dragger = function (props) {
@@ -14,5 +15,5 @@ export var Dragger = function (props) {
         e.preventDefault();
         setDragOver(over);
     };
-    return (React.createElement("div", { className: classes, onDrop: handleDrop, onDragOver: function (e) { return handleDrag(e, true); }, onDragLeave: function (e) { return handleDrag(e, false); } }, children));
+    return (_jsx("div", { className: classes, onDrop: handleDrop, onDragOver: function (e) { return handleDrag(e, true); }, onDragLeave: function (e) { return handleDrag(e, false); }, children: children }));
 };

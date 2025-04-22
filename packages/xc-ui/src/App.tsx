@@ -1,6 +1,9 @@
-import { Button, ButtonSize, ButtonType } from './components/Button';
-import { Menu, MenuItem, SubMenu} from './components/Menu';
+// import { Button, ButtonSize, ButtonType } from './components/Button';
+// import { Menu, MenuItem, SubMenu} from './components/Menu';
 import Icon from './components/Icon/Icon';
+// import { default as Menu } from './components/Menu';
+import { default as Menu } from '../build/xc-ui/src/components/Menu';
+import {Button, ButtonSize, ButtonType} from '../build/xc-ui/src/components/Button';
 
 function App() {
   return (
@@ -9,14 +12,14 @@ function App() {
      <Icon icon="coffee" theme="primary" size="10x" />
      <Icon icon="arrow-down" theme="danger" size="10x" />
       <Menu  mode='vertical' onSelect={(index) => console.log('-----click-----', index)}>
-        <MenuItem disabled >asd1</MenuItem>
-        <MenuItem >asd2</MenuItem>
-        <MenuItem >asd3</MenuItem>
-        <SubMenu title="dropdown">
-          <MenuItem disabled>dropdown1</MenuItem>
-          <MenuItem>dropdown2</MenuItem>
-          <MenuItem>dropdown3</MenuItem>
-        </SubMenu>
+        <Menu.Item disabled >asd1</Menu.Item>
+        <Menu.Item >asd2</Menu.Item>
+        <Menu.Item >asd3</Menu.Item>
+        <Menu.SubMenu title="dropdown">
+          <Menu.Item disabled>dropdown1</Menu.Item>
+          <Menu.Item>dropdown2</Menu.Item>
+          <Menu.Item>dropdown3</Menu.Item>
+        </Menu.SubMenu>
       </Menu>
       <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
         12399

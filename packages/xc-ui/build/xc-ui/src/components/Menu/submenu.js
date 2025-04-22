@@ -1,3 +1,4 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import React from "react";
 import classNames from "classnames";
 import { MenuContext } from "./constants";
@@ -24,8 +25,6 @@ export var SubMenu = function (props) {
             }
         });
     };
-    return (React.createElement("li", { className: classes, style: style },
-        React.createElement("div", { className: "submenu-title" }, title),
-        React.createElement("ul", { className: "submenu-list" }, renderChildren())));
+    return (_jsxs("li", { className: classes, style: style, children: [_jsx("div", { className: "submenu-title", children: title }), _jsx("ul", { className: "submenu-list", children: renderChildren() })] }));
 };
 SubMenu.displayName = 'SubMenu';

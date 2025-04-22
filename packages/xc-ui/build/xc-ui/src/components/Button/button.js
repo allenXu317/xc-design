@@ -20,10 +20,11 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+import { jsx as _jsx } from "react/jsx-runtime";
 import { ButtonType } from './constants';
 import classNames from 'classnames';
 /**
- * 这是一个button组件啊
+ * 这是一个button组件啊1
  */
 export var Button = function (_a) {
     var _b;
@@ -38,7 +39,7 @@ export var Button = function (_a) {
         _b));
     // link类型的button，使用a标签，其他类型使用button标签:
     if (btnType === ButtonType.Link && href) {
-        return (React.createElement("a", __assign({ className: classes, href: href }, restProps), children));
+        return (_jsx("a", __assign({ className: classes, href: href }, restProps, { children: children })));
     }
-    return (React.createElement("button", __assign({ className: classes, disabled: disabled }, restProps), children));
+    return (_jsx("button", __assign({ className: classes, disabled: disabled }, restProps, { children: children })));
 };

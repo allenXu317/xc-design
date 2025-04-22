@@ -18,6 +18,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import React from 'react';
 import axios from 'axios';
 import { Button } from '../Button';
@@ -145,12 +146,5 @@ export var Upload = function (props) {
             fileInput.current.value = '';
         }
     };
-    return (React.createElement("div", { className: "viking-upload-component" },
-        React.createElement("div", { className: "viking-upload-input", style: { display: 'inline-block' }, onClick: handleClick },
-            drag ? (React.createElement(Dragger, { onFile: function (files) { return uploadFiles(files); } },
-                React.createElement(Icon, { icon: "upload", size: "5x", theme: "secondary" }),
-                React.createElement("br", null),
-                React.createElement("p", null, "Drag file over to upload"))) : (React.createElement(Button, { btnType: "primary" }, text !== null && text !== void 0 ? text : 'Upload File')),
-            React.createElement("input", { ref: fileInput, type: "file", className: "viking-file-input", style: { display: 'none' }, onChange: handleFileChange, accept: accept, multiple: multiple })),
-        React.createElement(UploadFileList, { fileList: fileList, onRemove: handleRemove })));
+    return (_jsxs("div", { className: "viking-upload-component", children: [_jsxs("div", { className: "viking-upload-input", style: { display: 'inline-block' }, onClick: handleClick, children: [drag ? (_jsxs(Dragger, { onFile: function (files) { return uploadFiles(files); }, children: [_jsx(Icon, { icon: "upload", size: "5x", theme: "secondary" }), _jsx("br", {}), _jsx("p", { children: "Drag file over to upload" })] })) : (_jsx(Button, { btnType: "primary", children: text !== null && text !== void 0 ? text : 'Upload File' })), _jsx("input", { ref: fileInput, type: "file", className: "viking-file-input", style: { display: 'none' }, onChange: handleFileChange, accept: accept, multiple: multiple })] }), _jsx(UploadFileList, { fileList: fileList, onRemove: handleRemove })] }));
 };

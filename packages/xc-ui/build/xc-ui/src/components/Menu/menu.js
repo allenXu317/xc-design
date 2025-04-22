@@ -9,6 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import classNames from 'classnames';
 import { MenuContext } from './constants';
@@ -50,6 +51,5 @@ export var Menu = function (_a) {
             }
         });
     };
-    return (React.createElement("ul", { className: classes, style: style, "data-testid": "test-menu" },
-        React.createElement(MenuContext.Provider, { value: passedContext }, renderChildren())));
+    return (_jsx("ul", { className: classes, style: style, "data-testid": "test-menu", children: _jsx(MenuContext.Provider, { value: passedContext, children: renderChildren() }) }));
 };

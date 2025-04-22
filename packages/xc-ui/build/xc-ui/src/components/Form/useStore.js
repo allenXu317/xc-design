@@ -149,7 +149,6 @@ function useStore() {
                     e_2 = _a.sent();
                     isValid = false;
                     err = e_2;
-                    errors = err.errors;
                     return [3 /*break*/, 5];
                 case 4:
                     setForm({ isValid: isValid, errors: errors, isSubmitting: false });

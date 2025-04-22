@@ -128,7 +128,7 @@ function useStore() {
     } catch (e) {
       isValid = false;
       const err = e as ValidateErrorType;
-      errors = err.errors;
+      // errors = err.errors;
     } finally {
       setForm({ isValid, errors, isSubmitting: false });
     }

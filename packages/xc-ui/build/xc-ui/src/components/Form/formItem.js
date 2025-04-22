@@ -45,6 +45,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import React from 'react';
 import classNames from 'classnames';
 import { FormContext } from './form';
@@ -118,10 +119,5 @@ export var FormItem = function (props) {
     var rowClasses = classNames('viking-row', {
         'viking-row-no-label': !label,
     });
-    return (React.createElement("div", { className: rowClasses },
-        label && (React.createElement("div", { className: "viking-form-item-label" },
-            React.createElement("label", { className: labelClass, title: label }, label))),
-        React.createElement("div", { className: "viking-form-item" },
-            React.createElement("div", { className: itemClass }, newChildren),
-            hasError && (React.createElement("div", { className: "viking-form-item-explain", title: error[0].message }, error[0].message)))));
+    return (_jsxs("div", { className: rowClasses, children: [label && (_jsx("div", { className: "viking-form-item-label", children: _jsx("label", { className: labelClass, title: label, children: label }) })), _jsxs("div", { className: "viking-form-item", children: [_jsx("div", { className: itemClass, children: newChildren }), hasError && (_jsx("div", { className: "viking-form-item-explain", title: error[0].message, children: error[0].message }))] })] }));
 };

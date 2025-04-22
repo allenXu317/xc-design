@@ -1,3 +1,4 @@
+import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import useStore from './useStore';
 export var FormContext = React.createContext({});
@@ -14,6 +15,5 @@ export var Form = function (props) {
     // console.log('form', form);
     // console.log('fields', fields);
     // console.log('dispatch', dispatch);
-    return (React.createElement("form", { name: name, onSubmit: onSubmit, className: "viking-form" },
-        React.createElement(FormContext.Provider, { value: passedContext }, children)));
+    return (_jsx("form", { name: name, onSubmit: onSubmit, className: "viking-form", children: _jsx(FormContext.Provider, { value: passedContext, children: children }) }));
 };

@@ -9,10 +9,8 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime";
 export var Progress = function (props) {
     var percent = props.percent, _a = props.strokeHeight, strokeHeight = _a === void 0 ? 15 : _a, _b = props.showText, showText = _b === void 0 ? true : _b, _c = props.theme, theme = _c === void 0 ? 'primary' : _c, styles = props.styles;
-    return (React.createElement("div", { className: "viking-progress-bar" },
-        React.createElement("div", { className: "viking-progress-bar-outer", style: __assign({ height: "".concat(strokeHeight, "px") }, styles) },
-            React.createElement("div", { className: "viking-progress-bar-inner color-".concat(theme), style: { width: "".concat(percent, "%") } }, showText && React.createElement("span", { className: "inner-text" }, "".concat(percent, "%"))))));
+    return (_jsx("div", { className: "viking-progress-bar", children: _jsx("div", { className: "viking-progress-bar-outer", style: __assign({ height: "".concat(strokeHeight, "px") }, styles), children: _jsx("div", { className: "viking-progress-bar-inner color-".concat(theme), style: { width: "".concat(percent, "%") }, children: showText && _jsx("span", { className: "inner-text", children: "".concat(percent, "%") }) }) }) }));
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import classNames from "classnames";
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ export interface IconProps extends FontAwesomeIconProps {
 
 library.add(fas);
 
-const Icon: React.FC<IconProps> = (props) => {
+const Icon: FC<IconProps> = (props) => {
   // icon-primary
   const { className, theme, ...restProps } = props;
   const classes = classNames('xc-icon', className, {

@@ -34,6 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import React from 'react';
 import { Input } from '../Input/input';
 import Icon from '../Icon/Icon';
@@ -85,14 +86,10 @@ export var AutoComplete = function (props) {
         setShouldFetch(false);
     };
     var innerRenderOption = function (item) {
-        return renderOption ? renderOption(item) : React.createElement("div", null, item.value);
+        return renderOption ? renderOption(item) : _jsx("div", { children: item.value });
     };
-    return (React.createElement("div", { ref: componentRef },
-        React.createElement(Input, { value: autoCompleteValue, onChange: handleInputChange }),
-        React.createElement("ul", null,
-            loading && React.createElement(Icon, { icon: "spinner", spin: true }),
-            suggestions.map(function (item, index) {
-                return (React.createElement("li", { onClick: function () { return handleSelect(item); }, key: index }, innerRenderOption(item)));
-            }))));
+    return (_jsxs("div", { ref: componentRef, children: [_jsx(Input, { value: autoCompleteValue, onChange: handleInputChange }), _jsxs("ul", { children: [loading && _jsx(Icon, { icon: "spinner", spin: true }), suggestions.map(function (item, index) {
+                        return (_jsx("li", { onClick: function () { return handleSelect(item); }, children: innerRenderOption(item) }, index));
+                    })] })] }));
 };
 export default AutoComplete;

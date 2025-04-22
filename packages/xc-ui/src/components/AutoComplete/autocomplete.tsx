@@ -33,7 +33,7 @@ export const AutoComplete: React.FC<AutoCompleteProps> = (
   const [suggestions, setSuggestions] = React.useState<OptionType[]>([]);
   const [shouldFetch, setShouldFetch] = React.useState(true);
 
-  const componentRef = React.useRef<HTMLElement>(null!);
+  const componentRef = React.useRef<HTMLDivElement>(null!);
 
   const { useDebounce, useClickOutside } = hooks;
   const debounceValue = useDebounce(autoCompleteValue, 500);

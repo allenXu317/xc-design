@@ -1,3 +1,4 @@
+import { jsx as _jsx } from "react/jsx-runtime";
 import { useContext } from 'react';
 import { MenuContext } from './constants';
 import classNames from 'classnames';
@@ -15,7 +16,7 @@ export var MenuItem = function (props) {
             context.onSelect(index);
         }
     };
-    return (React.createElement("li", { className: classes, style: style, onClick: function () { return handleClick(); } }, children));
+    return (_jsx("li", { className: classes, style: style, onClick: function () { return handleClick(); }, children: children }));
 };
 MenuItem.displayName = 'MenuItem';
 export default MenuItem;

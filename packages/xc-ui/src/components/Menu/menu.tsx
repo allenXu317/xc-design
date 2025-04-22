@@ -24,7 +24,7 @@ export const Menu: React.FC<MenuProps> = ({
     'menu-horizontal': mode !== 'vertical',
   });
 
-  const handleOnSelect = (index: number) => {
+  const handleOnSelect = (index: string) => {
      setActive(index);
     if (onSelect && !disabled) {
       onSelect(index);
@@ -32,7 +32,7 @@ export const Menu: React.FC<MenuProps> = ({
   };
 
   const passedContext: IMenuContext = {
-    index: currentActive ? currentActive : 0,
+    index: currentActive ? currentActive : '0',
     onSelect: handleOnSelect,
   };
 
@@ -45,7 +45,7 @@ export const Menu: React.FC<MenuProps> = ({
         const displayName = (childElement.type as any).displayName;
         if(displayName === 'MenuItem' || displayName === 'SubMenu') {
           return React.cloneElement(childElement, {
-            index,
+            index: index.toString(),
           });
         } else {
           console.error('Warning: Menu has a child which is not a MenuItem component');

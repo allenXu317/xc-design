@@ -1,12 +1,13 @@
 import { Button, ButtonSize, ButtonType } from './components/Button';
 import { Menu, MenuItem, SubMenu} from './components/Menu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import Icon from './components/Icon/Icon';
 
 function App() {
   return (
     <>
-      <FontAwesomeIcon icon={faCoffee} />
+    {/* <AutoComplete /> */}
+     <Icon icon="coffee" theme="primary" size="10x" />
+     <Icon icon="arrow-down" theme="danger" size="10x" />
       <Menu  mode='vertical' onSelect={(index) => console.log('-----click-----', index)}>
         <MenuItem disabled >asd1</MenuItem>
         <MenuItem >asd2</MenuItem>

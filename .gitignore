@@ -3,3 +3,6 @@
 
 ./coverage/
 **/coverage/
+*storybook.log
+
+./stories/*

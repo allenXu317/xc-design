@@ -4,7 +4,6 @@ import classNames from 'classnames';
 
 export const MenuItem: React.FC<MenuItemProps> = (props) => {
   const { index, disabled, className, style, children } = props;
-  // console.log('---MenuItem---', props);
   const context = useContext(MenuContext);
 
   console.log('---MenuItem context---', context);

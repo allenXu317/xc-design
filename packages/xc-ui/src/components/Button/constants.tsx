@@ -13,13 +13,15 @@ enum ButtonType {
 }
 
 // 定义button的接口：
-interface BaseButtonProps {
+export interface BaseButtonProps {
+  /** Is this the principal call to action on the page? */
   className?: string;
   disabled?: boolean;
-  size?: ButtonSize;
-  btnType?: ButtonType;
+  size?: 'lg' | 'sm';
+  btnType?: 'primary' | 'default' | 'danger' | 'link';
   children: React.ReactNode;
   href?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 type NativeButtonProps = BaseButtonProps &
@@ -27,8 +29,7 @@ type NativeButtonProps = BaseButtonProps &
 type AnchorButtonProps = BaseButtonProps &
   React.AnchorHTMLAttributes<HTMLElement>;
 
-type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
 // 导出button的属性：
-export type { ButtonProps };
 export { ButtonSize, ButtonType };

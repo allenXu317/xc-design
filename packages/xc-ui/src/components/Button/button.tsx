@@ -1,15 +1,19 @@
-import { ButtonSize, ButtonType, ButtonProps } from './constants';
+import { ButtonType, BaseButtonProps } from './constants';
 import classNames from 'classnames';
 
-export const Button: React.FC<ButtonProps> = ({
+/**
+ * 这是一个button组件啊
+ */
+export const Button = ({
+  /**接受组件的样式 */
   className,
-  btnType = ButtonType.Default,
+  btnType = 'default',
   disabled = false,
-  size = ButtonSize.Small,
+  size = 'sm',
   children,
   href,
   ...restProps
-}) => {
+}: BaseButtonProps) => {
   // 为class增加组件自定义的公共前缀:
   const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,

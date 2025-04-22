@@ -1,12 +1,12 @@
 import { createContext } from 'react';
 
 type MenuMode = 'horizontal' | 'vertical';
-type MenuSelectCallback = (selectedIndex: number | string) => void;
+type MenuSelectCallback = (selectedIndex: string) => void;
 
 interface MenuProps {
   disabled ?: boolean;
   mode ?: MenuMode;
-  defaultIndex ?: number;
+  defaultIndex ?: string;
   className ?: string;
   style ?: React.CSSProperties;
   onSelect ?: MenuSelectCallback;
@@ -15,7 +15,7 @@ interface MenuProps {
 }
 
 interface MenuItemProps {
-  index?: number | string;
+  index?: string;
   disabled?: boolean;
   className?: string;
   style?: React.CSSProperties;
@@ -24,7 +24,7 @@ interface MenuItemProps {
 }
 
 interface SubMenuProps {
-  index?: number;
+  index?: string;
   title: string;
   className?: string;
   style?: React.CSSProperties;
@@ -34,11 +34,11 @@ interface SubMenuProps {
 
 // 全局context接口
 interface IMenuContext {
-  index: number;
+  index: string;
   onSelect?: MenuSelectCallback;
 }
 
-const MenuContext = createContext<IMenuContext>({ index: 0 });
+const MenuContext = createContext<IMenuContext>({ index: '0' });
 
 export type { MenuProps, MenuItemProps, SubMenuProps, IMenuContext };
 export { MenuContext };

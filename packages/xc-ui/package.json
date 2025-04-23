@@ -4,9 +4,12 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "yarn clen && yarn build:ts && yarn build:css",
     "lint1": "eslint .",
     "preview": "vite preview",
-    "test": "node --experimental-require-module jest"
+    "test": "node --experimental-require-module jest",
+    "build:ts": "tsc -p ./tsconfig.build.json",
+    "build:css": "sass ./src/styles/index.scss:./dist/index.css",
+    "clean": "rimraf ./dist"
   }
 }

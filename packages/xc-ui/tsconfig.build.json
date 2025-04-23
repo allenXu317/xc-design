@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "build",
+    "outDir": "dist",
     "module": "ESNext",
     "target": "ES5",
     "declaration": true,
@@ -10,7 +10,7 @@
     "lib": ["ES2015", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
   },
-  "include": ["src"],
+  "include": ["./src"],
   "exclude": [
     "node_modules",
     "build",

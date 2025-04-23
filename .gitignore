@@ -9,3 +9,4 @@
 
 # 将build文件夹添加到.gitignore
 /build/
+/dist/
